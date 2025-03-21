@@ -1,0 +1,20 @@
+Nombre: Juan Pérez
+Email: juanperez@example.com
+Teléfono: 123456789
+Motivo: Consulta sobre un proyecto
+----------------------
+Nombre: Juan Pérez
+Email: juanperez@example.com
+Teléfono: 123456789
+Motivo: Consulta sobre un proyecto
+----------------------
+Nombre: Ana Lilia Salinas Callejas
+Email: salinas.analilia41@gmail.com
+Teléfono: 5573465017
+Motivo: Contacto
+----------------------
+Nombre: Ana Lilia Salinas Callejas
+Email: salinas.analilia41@gmail.com
+Teléfono: 5573465017
+Motivo: Contacto
+----------------------

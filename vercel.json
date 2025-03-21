@@ -1,0 +1,17 @@
+{
+  "version": 2,
+  "builds": [
+    {
+      "src": "portafolioWeb/package.json",
+      "use": "@vercel/static"
+    },
+    {
+      "src": "portafolioApi/server.js",
+      "use": "@vercel/node"
+    }
+  ],
+  "routes": [
+    { "src": "/api/(.*)", "dest": "portafolioWeb/server.js" },
+    { "src": "(.*)", "dest": "astro-app/dist/$1" }
+  ]
+}

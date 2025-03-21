@@ -1,0 +1,30 @@
+---
+import "../styles/styles.css";
+import ContactForm from "../components/contactForm.jsx";
+---
+
+<div class="main-content">
+	<nav>
+		<a href="/">Inicio</a>
+		<a href="/educacion">Educacion</a>
+		<a href="/profesional">Experiencia Profesional</a>
+		<a href="/habilidades">Habilidades</a>
+		<a href="/proyectos">Poyectos</a>
+		<a href="/contactame">Contáctame</a>
+	</nav>
+	<div class="colEducacion">
+		<div class="item colTitleEducacion">
+			<div class="Titles">Contáctame</div>
+		</div>
+		<div class="colImageEducacion">
+			<div class="img">
+				<img src="koala_contactame.webp" alt="My piture" />
+			</div>
+		</div>
+		<div class="colDatosEducacion textoInicio">
+			<div class="cuadroDatosEducacion">
+				<ContactForm client:load />
+			</div>
+		</div>
+	</div>
+</div>

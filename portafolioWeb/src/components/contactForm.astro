@@ -1,0 +1,53 @@
+---
+let mensaje = "";
+
+const enviarFormulario = async (event) => {
+  event.preventDefault();
+
+  // Obtener los datos del formulario
+  const formData = new FormData(event.target);
+  const data = Object.fromEntries(formData.entries());
+
+  try {
+    const respuesta = await fetch("http://localhost:3000/contacto", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(data),
+    });
+
+    const result = await respuesta.json();
+    mensaje = result.mensaje || "Formulario enviado con éxito";
+  } catch (error) {
+    mensaje = "Hubo un error al conectar con el servidor";
+  }
+};
+---
+
+<form on:submit={enviarFormulario}>
+    <div class="alineaInputs">
+      <label>Nombre:</label>
+      <input type="text" id="Nombre" name="nombre" required />
+      <br />
+  
+      <label>Apellidos:</label>
+      <input type="text" id="Apellidos" name="apellidos" required />
+      <br />
+  
+      <label>Email:</label>
+      <input type="email" id="Email" name="email" required />
+      <br />
+  
+      <label>Teléfono:</label>
+      <input type="tel" id="Telefono" name="telefono" required />
+      <br />
+  
+      <label>Motivo de contacto:</label>
+      <textarea id="motivo" name="motivo" required></textarea>
+    </div>
+  
+    <div class="alineaBtn">
+      <button class="btnEnviar" type="submit">Enviar</button>
+    </div>
+  
+    {mensaje && <p>{mensaje}</p>}
+  </form>
